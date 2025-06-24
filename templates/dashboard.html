@@ -1,7 +1,34 @@
-
 {% extends 'base.html' %}
-{% block title %}Dashboard{% endblock %}
 {% block content %}
-<h2>Dashboard</h2>
-<p>Bem-vindo à página dashboard.</p>
+
+<div class="dashboard-container">
+    <h1>🎉 Bem-vinda, Thamires!</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h3>👤 Meu Perfil</h3>
+            <p>Veja ou edite seus dados pessoais.</p>
+            <a href="{{ url_for('perfil') }}">Acessar Perfil</a>
+        </div>
+
+        <div class="card">
+            <h3>📑 Meus Dados</h3>
+            <p>Visualize informações e histórico.</p>
+            <a href="#">Ver Dados</a>
+        </div>
+
+        <div class="card">
+            <h3>⚙️ Configurações</h3>
+            <p>Ajuste preferências da sua conta.</p>
+            <a href="#">Configurar</a>
+        </div>
+
+        <div class="card">
+            <h3>🚪 Sair</h3>
+            <p>Encerrar sessão.</p>
+            <a href="{{ url_for('index') }}">Logout</a>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
